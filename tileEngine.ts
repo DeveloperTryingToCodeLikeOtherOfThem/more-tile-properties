@@ -12,11 +12,11 @@ namespace tiles {
 
         //% blockId=tile_x block="$this(tileSprite) x"
         //% weight=99 
-          //% help=docs/tileEngine
-       public x: number
+        //% help=docs/tileEngine
+        public x: number
         //% blockId=tile_y block="$this(tileSprite) y"
-       //% weight=98
-       //% help=docs/tileEngine
+        //% weight=98
+        //% help=docs/tileEngine
         public y: number
 
         constructor(img: Image) {
@@ -30,8 +30,8 @@ namespace tiles {
         //% blockId="tile_width" blockCombine
         //% block="width"
         //% blockSetVariable=tileSprite
-          //% weight=97
-            //% help=docs/tileEngine
+        //% weight=97
+        //% help=docs/tileEngine
         get width(): number {
             return Fx.toFloat(this._width) >> screen.width;
         }
@@ -39,20 +39,20 @@ namespace tiles {
         //% blockId="tile_height" blockCombine 
         //% block="height"
         //% blockSetVariable=tileSprite
-          //% weight=96 
-            //% help=docs/tileEngine
+        //% weight=96 
+        //% help=docs/tileEngine
         get height(): number {
             return Fx.toFloat(this._height) >> screen.height;
         }
 
         //% blockId="tile_follow" block="$this(tileSprite) %sprite=variables_get(mySprite) || %speed"
-          //% weight=96
-          /**
-           * follows the tile at a speed of how much
-           * @param sprite A Sprite 
-           * @param speed A Number
-           */
-            //% help=docs/tileEngine
+        //% weight=96
+        /**
+         * follows the tile at a speed of how much
+         * @param sprite A Sprite 
+         * @param speed A Number
+         */
+        //% help=docs/tileEngine
         follow(sprite: Sprite, speed: number = 100) {
             const followTile = new TileFollow(sprite, this.tile);
             follow(sprite, this.tile as Image, speed)
@@ -60,13 +60,13 @@ namespace tiles {
 
         //% blockId="tile_place_tile_loc" block="$this(tileSprite) %tile=tileset_tile_picker"
         //% draggableParameters="reporter" 
-          //% weight=95
-          /**
-           * Places the tile on a specific cordinate 
-           * @param tile A Image 
-           * @param location A tile location for placing the sprite x, y 
-           */
-            //% help=docs/tileEngine
+        //% weight=95
+        /**
+         * Places the tile on a specific cordinate 
+         * @param tile A Image 
+         * @param location A tile location for placing the sprite x, y 
+         */
+        //% help=docs/tileEngine
         placeTile(tile: Image, loc: (x: number, y: number) => tiles.Location) {
             setTileAt(loc(this.x, this.y), tile)
         }

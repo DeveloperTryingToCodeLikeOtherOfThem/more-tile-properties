@@ -6,7 +6,6 @@
         "device": "*"
     },
     "files": [
-        "main.ts",
         "README.md",
         "assets.json",
         "tileEngine.ts",
