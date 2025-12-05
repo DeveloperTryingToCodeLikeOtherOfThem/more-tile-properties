@@ -1,0 +1,28 @@
+{
+    "name": "More Tile Properties",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tileEngine.ts",
+        "pxt_modules/game/docs/tileEngine.md",
+        "pxt_modules/blob/HEAD/docs/tileEngine.md",
+        "pxt_modules/docs/tileEngine.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "2.0.62",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj",
+    "languageRestriction": "javascript-only"
+}
